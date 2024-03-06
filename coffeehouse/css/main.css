@@ -1,0 +1,219 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {                                /*Класс для обобщёных свойств*/
+    --container-width: 1270px;
+    --container-padding: 15px;
+    --secondary: rgba(15, 31, 28, 0.5);
+}
+
+body {
+    font-family: "Roboto", sans-serif; /*Шрифт*/
+    background-color: rgb(246, 246, 246); /*Цвета фона сайта*/
+    color: black;                   /*Цвет текста*/
+}
+
+.none {
+    display: none !important;        /*Скрытие элементов*/
+}
+
+.container {
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;                 /*Отступ от края элемента*/
+}
+
+.container-right {                 /*Нестандартный контейнер справа*/
+    padding-left: calc( (100% - var(--container-width))/2 + var(--container-padding) );
+}
+
+.container-left {                  /*Нестандартный контейнер слева*/
+    padding-right: calc( (100% - var(--container-width))/2 + var(--container-padding) );
+}
+
+.header {                     /*Шапка сайта*/
+    position: relative;      /*Сдвигание элемента*/                      
+    min-height: 940px;       /*Минимальная высота*/
+    background: linear-gradient(132.05deg, #92711d -17.38%, #381f06 78.4%), #311e0c; /*Градиент*/
+    padding-top: 44px; /*Отступ сверху*/
+    color: #fff; /*Цвет шрифта*/    
+}
+
+.header a {
+    color: #fff; /*Цвет ссылок*/
+}
+
+.header::after { /*Стиль SVG элемента*/
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 96px;
+    background-image: url("./../img/header/header.svg");
+    background-size: 100%;    
+}
+
+.header__top { /*Навигация*/
+    margin-bottom: 86px; /*Отступ вниз*/
+}
+
+.header__content { /*Текст в шапке*/
+    max-width: 592px; /*Максимальная ширина текста*/
+}
+
+.nav {
+    display: flex; /*Отображение по ширине*/
+    justify-content: space-between; /*Распределение равномерно*/
+    align-items: center; /*Выровнять по центру*/
+    column-gap: 80px; /*Отступы между словами*/
+}
+
+.nav__list { /*Настройка кнопок*/
+    display: flex;
+    column-gap: 80px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav__gallery {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.logo {           /*Логотип*/
+    font-size: 20px;
+    color: #fff; /*Цвет шрифта*/  
+    font-weight: 700; /*Толщина шрифта*/  
+}
+
+.logo a {
+    color: inherit; /*Наследование цвета ссылки (белый)*/
+}
+
+.btn { /*Кнопка галерея*/ 
+    padding: 13px 44px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(129.54deg, #f27f59 15.57%, #da6b66 95.03%), #FFFFFF;
+    border-radius: 100px;
+}
+
+.header__badge {
+    margin-bottom: 7px;
+    display: inline-block; /*Занимает столько места, сколько текст внутри*/ 
+    padding: 11px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 15px; /*Закругление углов*/
+}
+
+.header__title {
+    margin-bottom: 30px;
+    font-size: 55px;
+}
+
+.header__text {
+    margin-bottom: 68px;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.header__btn {
+    display: inline-block;
+    padding: 27px 48px;
+    border-radius: 27px;
+    font-size: 25px;
+    font-weight: 600;
+    background: linear-gradient(129.54deg, #f27f59 15.57%, #da6b66 95.03%), #FFFFFF;
+}
+
+/*About*/
+
+.about {
+    padding-top: 96px 0 100px;
+    overflow-x: hidden;
+}
+
+.about__row {
+    display: flex;
+    column-gap: 50px;
+}
+
+.about__content {
+    max-width: 379px;
+}
+
+.about__slider {
+    width: 1110px;
+    flex-shrink: 0;
+}
+
+.about__title {
+    margin-bottom: 15px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.about__title span {
+    font-size: 30px;
+}
+
+.about__text {
+    margin-bottom: 60px;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+/* Slaider */
+
+.slider  {
+    position: relative;
+    height: 456px;
+}
+
+.slider__item {
+    margin-top: 27px;
+    width: 335px;
+    height: 402px;
+    object-fit: cover;   
+    border-radius: 35px;
+    transition: 0.2s ease-in;
+}
+
+.slider .center .slider__item {
+    margin-top: 0;
+    width: 380px;
+    height: 456px;
+}
+
+.slider__btn {
+    position: absolute;    
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    display: block;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    display: flex;    
+    align-items: center;
+    background: linear-gradient(129.54deg, #f27f59 15.57%, #da6b66 95.03%), #FFFFFF;
+}
+
+.slider__btn--prev {
+    left: -27px;
+    padding-left: 26px;
+    justify-content: flex-start;
+}
+
+.slider__btn--next { 
+    right: -27px;
+    transform: scaleX(-1); /*Отзеркаливание левой стрелки в правую сторону*/
+    padding-right: 26px;
+    justify-content: flex-end;
+}
