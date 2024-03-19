@@ -76,12 +76,7 @@ body {
     font-weight: 500;
 }
 
-.nav__list {
-    color: #fff;
-    cursor: pointer;
-}
-
-.nav__number {
+.nav__gallery {
     font-size: 15px;
     font-weight: 500;
 }
@@ -136,11 +131,6 @@ body {
     background: linear-gradient(129.54deg, #f27f59 15.57%, #da6b66 95.03%), #FFFFFF;
 }
 
-.header__btn:hover {
-    color: #fff;
-    cursor: pointer;
-}
-
 /*About*/
 
 .about {
@@ -179,7 +169,7 @@ body {
     color: var(--secondary);
 }
 
-/* Slider */
+/* Slaider */
 
 .slider  {
     position: relative;
@@ -226,55 +216,4 @@ body {
     transform: scaleX(-1); /*Отзеркаливание левой стрелки в правую сторону*/
     padding-right: 26px;
     justify-content: flex-end;
-}
-
-/* Menu */
-
-.menu {
-    padding: 120px 0 100px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background: rgba(246, 246, 246);
-}
-
-.menu h2 {
-    padding-left: 43%;
-    padding-bottom: 50px;
-    font-size: 40px;
-    font-weight: 450;
-}
-
-.menu-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background: linear-gradient(132.05deg, #b0861d -17.38%, #bb6713 78.4%), #60340b;
-    padding: 20px;
-    box-sizing: border-box;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-.menu-item img {
-    border-radius: 50%;
-}
-
-.coffee-info {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-}
-
-.coffee-info span {
-    font-size: 30px;
-    font-weight: 500;
-}
-
-.coffee-info .coffee-description {
-    font-size: 20px;
-}
-
-.price {
-    margin-left: 15px;
-    font-size: 25px;
 }

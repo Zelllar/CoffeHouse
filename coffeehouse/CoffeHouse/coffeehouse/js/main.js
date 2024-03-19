@@ -14,8 +14,3 @@ $('.slider__btn--prev').click(function() {
 $('.slider__btn--next').click(function() {
     owl.trigger('next.owl.carousel');
 })
-
-function scrollToSection(sectionId) {
-    var section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: 'smooth' });
-}
