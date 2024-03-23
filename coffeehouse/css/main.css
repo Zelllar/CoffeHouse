@@ -278,3 +278,22 @@ body {
     margin-left: 15px;
     font-size: 25px;
 }
+
+.contacts {
+    align-items: center;
+    width: 100%;
+}
+
+.contacts h2 {
+    margin-bottom: 20px;
+}
+
+.contacts ul li {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.contacts ul li strong {
+    margin-right: 5px;
+}
+
